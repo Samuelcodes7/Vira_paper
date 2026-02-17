@@ -894,3 +894,29 @@
     right: 20px;
   }
 }
+
+/* ===========================
+   PAPER CARD IMAGE FIX
+=========================== */
+
+.paper-media {
+  width: 100%;
+  height: 200px;          /* CHANGE THIS FOR BIGGER / SMALLER */
+  margin-bottom: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.paper-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* keeps proportions */
+  display: block;
+}
+
+/* Optional hover zoom */
+.paper-card:hover .paper-media img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
