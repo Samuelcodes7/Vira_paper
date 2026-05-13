@@ -183,7 +183,7 @@
   padding: 0 22px;
   line-height: 1;
   border-radius: 999px;
-  border: 2px solid rgba(37, 211, 102, 0.5);
+  border: 2px solid rgba(36, 151, 233, 0.974);
   background: #f1f1f1;
   color: #222;
   font-family: "Poppins", sans-serif;
@@ -199,10 +199,10 @@
 
 /* WhatsApp green hover */
 .contact-btn:hover {
-  background: #25D366;
+  background: #22a6f0;
   color: white;
-  border-color: #25D366;
-  box-shadow: 0 0 18px rgba(37, 211, 102, 0.8);
+  border-color: #22a6f0;
+  box-shadow: 0 0 18px rgba(36, 151, 233, 0.974);
 }
 
 /* Text layers */
