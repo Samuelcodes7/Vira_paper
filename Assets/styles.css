@@ -1252,25 +1252,38 @@ hr {
   font-size: 0.9rem;
   color: #d9e2ff;
 }
+.social-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  z-index: 999;
+}
+
 .social-icons a {
-  float: left;
   width: 45px;
   height: 45px;
-  margin-right: 15px;
   background: #3a3f45;
   border-radius: 50%;
   color: #ffffff;
   text-decoration: none;
   font-size: 18px;
-  line-height: 45px; /* centers icon vertically */
-  text-align: center; /* centers icon horizontally */
-  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
 }
 
 .social-icons a:hover {
   background: #5a8dee;
+  transform: translateX(-5px);
 }
-
 
 /* FIX HAMBURGER POSITION */
 .hamburger {
