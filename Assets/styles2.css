@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +9,13 @@ body {
   background: #f6f8fb;
   color: #333;
 }
-/* Printing & Packaging Section */
+
+/* ==========================================
+   1. Printing & Packaging Section
+   ========================================== */
 .pp-section {
   padding: 60px 0;
-  background: #f6f8fb; /* light background */
+  background: #f6f8fb;
   color: #333;
 }
 
@@ -53,7 +55,7 @@ body {
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.08);
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  transition: transform .3s ease, box-shadow .3s ease, border .3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   cursor: pointer;
 }
 
@@ -75,10 +77,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .35s ease;
+  transition: transform 0.35s ease;
 }
 
-/* Image zoom on hover */
 .pp-card:hover .pp-img img {
   transform: scale(1.1);
 }
@@ -97,32 +98,9 @@ body {
   line-height: 1.6;
 }
 
-/* Mobile Responsive */
-@media (max-width: 900px) {
-  .pp-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .pp-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Mobile */
-@media (max-width: 900px) {
-  .pp-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .pp-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* ==========================================
+   2. Print Info Section
+   ========================================== */
 .print-section {
   padding: 70px 10%;
   background: #f5fbff;
@@ -188,21 +166,11 @@ body {
   transform: scale(1.1);
 }
 
-@media (max-width: 900px) {
-  .print-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .print-img-box {
-    width: 100%;
-    height: 260px;
-  }
-}
-
-
+/* ==========================================
+   3. Quality & Quote Section
+   ========================================== */
 .quality-section {
-  background: #62b7ff; /* dark navy background */
+  background: #62b7ff;
   padding: 80px 20px;
   text-align: center;
   color: #ffffff;
@@ -224,19 +192,22 @@ body {
 
 .quote-btn {
   display: inline-block;
-  background: #f3a428; /* yellow button color */
+  background: #f3a428;
   padding: 12px 30px;
   border-radius: 6px;
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  transition: 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .quote-btn:hover {
-  background: #d48d20; /* darker on hover */
+  background: #d48d20;
 }
 
+/* ==========================================
+   4. RFQ Form Section
+   ========================================== */
 .vira-rfq {
   width: 100%;
   padding: 80px 50px;
@@ -317,14 +288,81 @@ body {
   cursor: pointer;
   margin-top: 20px;
   font-weight: 600;
-  transition: 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .rfq-btn:hover {
   background: #155ea8;
 }
 
-/* MOBILE FIX */
+.back-btn {
+  background: #ffffff;
+  color: #1b76d1;
+  border: 2px solid #1b76d1;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #1b76d1;
+  color: #ffffff;
+}
+
+/* ==========================================
+   5. Social Icons 
+   ========================================== */
+/* SOCIAL ICONS INSIDE CONTACT COLUMN */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  right: 0px; 
+  top: -30px;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  background: #3a3f45;
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #5a8dee;
+  transform: translateX(-3px);
+}
+
+/* ==========================================
+   6. Media Queries (Mobile Responsiveness)
+   ========================================== */
+@media (max-width: 900px) {
+  .pp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .print-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .print-img-box {
+    width: 100%;
+    height: 260px;
+  }
+}
+
 @media (max-width: 768px) {
   .rfq-form .rfq-row {
     flex-direction: column;
@@ -343,21 +381,49 @@ body {
   }
 }
 
-.back-btn {
-  background: #ffffff;
-  color: #1b76d1;
-  border: 2px solid #1b76d1;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  transition: 0.3s;
+@media (max-width: 600px) {
+  .pp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* 1. Set up the footer container */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces 3 columns for text */
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative; /* CRITICAL: This traps the absolute social icons inside the footer */
+  padding-right: 60px; /* Adds breathing room so text doesn't touch the icons */
 }
 
-.back-btn:hover {
-  background: #1b76d1;
+/* 2. Vertically center the icons on the far right */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adjust gap between icons */
+  position: absolute;
+  right: 0;           /* Push all the way to the right edge */
+  top: 50%;           /* Push 50% down */
+  transform: translateY(-50%); /* Pull back exactly half their height for perfect vertical centering */
+}
+
+/* Optional: Make the icons match your image */
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #444444; /* Dark grey from your image */
+  border-radius: 50%;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
+.social-icons a:hover {
+  background: #222222; /* Darker on hover */
+  transform: scale(1.1);
+}

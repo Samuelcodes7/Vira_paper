@@ -270,6 +270,47 @@ body {
     display: none;
   }
 }
+/* 1. Set up the footer container */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Forces 3 columns for text */
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative; /* CRITICAL: This traps the absolute social icons inside the footer */
+  padding-right: 60px; /* Adds breathing room so text doesn't touch the icons */
+}
+
+/* 2. Vertically center the icons on the far right */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adjust gap between icons */
+  position: absolute;
+  right: 0;           /* Push all the way to the right edge */
+  top: 50%;           /* Push 50% down */
+  transform: translateY(-50%); /* Pull back exactly half their height for perfect vertical centering */
+}
+
+/* Optional: Make the icons match your image */
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #444444; /* Dark grey from your image */
+  border-radius: 50%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #222222; /* Darker on hover */
+  transform: scale(1.1);
+}
 /* MOBILE FIX FOR SLIDE BUTTONS */
 @media (max-width: 600px) {
   .slide-btn {
